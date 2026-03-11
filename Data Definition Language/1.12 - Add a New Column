@@ -1,2 +1,5 @@
 
 Write a SQL query to add a new column to an existing table.
+-- Add a new column "Department" to the "Employees" table.
+ALTER TABLE Employees
+ADD Department VARCHAR(50); -- Add a column to store department names.
