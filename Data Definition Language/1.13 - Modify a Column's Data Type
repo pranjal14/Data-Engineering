@@ -1,1 +1,4 @@
 Write a SQL query to change the data type of an existing column in a table.
+-- Change the data type of the "Salary" column to INTEGER.
+ALTER TABLE Employees -- Specify the table to modify.
+MODIFY Salary INT; -- Modify the data type of the "Salary" column to INTEGER.
