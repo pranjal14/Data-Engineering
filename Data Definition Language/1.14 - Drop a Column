@@ -1,2 +1,5 @@
 
 Write a SQL query to remove a column from an existing table
+-- Remove the "Department" column from the "Employees" table.
+ALTER TABLE Employees -- Specify the table to modify.
+DROP COLUMN Department; -- Drop the "Department" column.
