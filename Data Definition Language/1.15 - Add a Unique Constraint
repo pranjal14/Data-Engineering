@@ -1,2 +1,6 @@
 
 Write a SQL query to add a unique constraint to a column in an existing table.
+-- Add a unique constraint to the "Name" column to ensure no duplicate names.
+ALTER TABLE Employees -- Specify the table to modify.
+ADD CONSTRAINT UC_Name UNIQUE (Name); -- Ensure all names are unique.
+Explanation:
