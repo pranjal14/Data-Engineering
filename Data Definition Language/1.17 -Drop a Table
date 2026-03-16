@@ -1,2 +1,4 @@
 
 Write a SQL query to permanently delete a table and all its data.
+-- Delete the "Departments" table permanently.
+DROP TABLE Departments; -- Permanently remove the "Departments" table.
