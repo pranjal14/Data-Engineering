@@ -1,2 +1,4 @@
 
 Write a SQL query to remove all rows from a table while retaining its structure.
+-- Remove all rows from the "Employees" table but keep the table structure.
+TRUNCATE TABLE Employees; -- Delete all rows in the "Employees" table.
