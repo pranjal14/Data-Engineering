@@ -1,2 +1,5 @@
 
 Write a SQL query to assign a default value to a column in an existing table.
+-- Set a default value of 0 for the "Salary" column.
+ALTER TABLE Employees
+ALTER COLUMN Salary SET DEFAULT 0; -- Assign a default value of 0 to "Salary".
