@@ -1,2 +1,5 @@
 
 Write a SQL query to remove a constraint from an existing table.
+-- Remove the unique constraint "UC_Name" from the "Employees" table.
+ALTER TABLE Employees
+DROP CONSTRAINT UC_Name; -- Delete the unique constraint on "Name".
