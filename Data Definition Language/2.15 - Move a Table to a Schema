@@ -1,2 +1,4 @@
 
 Write a SQL query to move a table from one schema to another.
+-- Move the "Employees" table to the "HR" schema.
+ALTER SCHEMA HR TRANSFER Employees; -- Transfer the "Employees" table to the "HR" schema.
