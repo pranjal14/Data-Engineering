@@ -1,2 +1,8 @@
 
 Write a SQL query to insert multiple records into a table in a single operation.
+-- Insert multiple employee records into the "Employees" table.
+INSERT INTO Employees (EmployeeID, Name, Age, Salary) -- Specify the columns to insert data into.
+VALUES 
+    (2, 'Berna Alder', 25, 45000), -- First record.
+    (3, 'Khayri Ivo', 28, 52000), -- Second record.
+    (4, 'Teppo Abel', 35, 60000); -- Third record.
