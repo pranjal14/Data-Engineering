@@ -1,2 +1,6 @@
 
 Write a SQL query to update a single record in a table based on a specific condition.
+-- Update the salary of an employee with EmployeeID = 1.
+UPDATE Employees -- Specify the table to update.
+SET Salary = 55000 -- Set the new value for the "Salary" column.
+WHERE EmployeeID = 1; -- Apply the update only to the employee with ID 1
