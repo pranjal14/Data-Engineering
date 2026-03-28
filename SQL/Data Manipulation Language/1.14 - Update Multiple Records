@@ -1,2 +1,6 @@
 
 Write a SQL query to update multiple records in a table based on a specific condition.
+-- Increase the salary of all employees aged over 30 by 10%.
+UPDATE Employees -- Specify the table to update.
+SET Salary = Salary * 1.10 -- Increase the salary by 10%.
+WHERE Age > 30; -- Apply the update to employees older than 30.
