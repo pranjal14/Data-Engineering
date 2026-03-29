@@ -1,2 +1,5 @@
 
 Write a SQL query to delete a single record from a table based on a specific condition.
+-- Delete the employee with EmployeeID = 4.
+DELETE FROM Employees -- Specify the table to delete from.
+WHERE EmployeeID = 4; -- Delete only the employee with ID 4.
