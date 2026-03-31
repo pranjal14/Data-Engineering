@@ -1,2 +1,5 @@
 
 Write a SQL query to insert a record into a table with default values for unspecified columns.
+-- Insert a record with default values for unspecified columns.
+INSERT INTO Employees (EmployeeID, Name) -- Specify only some columns.
+VALUES (5, 'Charlie Davis'); -- Provide values for specified columns; others use defaults.
