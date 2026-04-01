@@ -1,2 +1,7 @@
 
 Write a SQL query to update records in a table using a subquery to determine the condition.
+-- Update the salary of employees in the same department as EmployeeID = 1.
+UPDATE Employees -- Specify the table to update.
+SET Salary = Salary + 5000 -- Increase the salary by 5000.
+WHERE DepartmentID = (SELECT DepartmentID FROM Employees WHERE EmployeeID = 1);
+-- Use a subquery to find the department of EmployeeID = 1.
