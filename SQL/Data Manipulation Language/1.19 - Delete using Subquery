@@ -1,2 +1,6 @@
 
 Write a SQL query to delete records from a table using a subquery to determine the condition
+-- Delete employees who work in the same department as EmployeeID = 2.
+DELETE FROM Employees -- Specify the table to delete from.
+WHERE DepartmentID = (SELECT DepartmentID FROM Employees WHERE EmployeeID = 2);
+-- Use a subquery to find the department of EmployeeID = 2.
