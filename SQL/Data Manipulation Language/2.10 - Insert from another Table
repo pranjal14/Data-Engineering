@@ -1,2 +1,5 @@
 
 Write a SQL query to copy data from one table into another table.
+-- Insert employees from the "OldEmployees" table into the "Employees" table.
+INSERT INTO Employees (EmployeeID, Name, Age, Salary) -- Specify the target columns.
+SELECT EmployeeID, Name, Age, Salary FROM OldEmployees; -- Copy data from another table.
