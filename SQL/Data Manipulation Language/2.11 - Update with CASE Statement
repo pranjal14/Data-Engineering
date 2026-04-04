@@ -1,2 +1,8 @@
 
 Write a SQL query to update records in a table using conditional logic with a CASE statement.
+-- Update salaries based on age: increase by 5000 if age > 30, otherwise increase by 2000.
+UPDATE Employees -- Specify the table to update.
+SET Salary = CASE 
+    WHEN Age > 30 THEN Salary + 5000 -- Increase by 5000 if age > 30.
+    ELSE Salary + 2000 -- Otherwise, increase by 2000.
+END;
