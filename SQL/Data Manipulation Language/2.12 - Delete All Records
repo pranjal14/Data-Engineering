@@ -1,2 +1,4 @@
 
 Write a SQL query to delete all records from a table.
+-- Delete all records from the "Employees" table.
+DELETE FROM Employees; -- Remove all rows without a WHERE clause.
