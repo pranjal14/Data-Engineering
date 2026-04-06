@@ -1,2 +1,5 @@
 
 Write a SQL query to insert a record into a table where the primary key is auto-generated.
+-- Insert a record where EmployeeID is auto-generated.
+INSERT INTO Employees (Name, Age, Salary) -- Exclude the auto-increment column.
+VALUES ('Eve White', 27, 48000); -- Provide values for other columns.
