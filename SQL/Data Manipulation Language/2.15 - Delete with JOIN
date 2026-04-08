@@ -1,2 +1,10 @@
 
 Write a SQL query to delete records from one table based on a condition derived from a related table using a JOIN.
+
+
+-- Delete employees who belong to a department that has been marked as inactive.
+DELETE E -- Alias for the "Employees" table.
+FROM Employees E
+JOIN Departments D ON E.DepartmentID = D.DepartmentID -- Join with the "Departments" table.
+WHERE D.IsActive = 0; -- Delete employees in inactive departments.
+Explanation:
