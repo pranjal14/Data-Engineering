@@ -11,3 +11,9 @@ Sample table: salesman
         5006 | Mc Lyon    | Paris    |       0.14
         5007 | Paul Adam  | Rome     |       0.13
         5003 | Lauson Hen | San Jose |       0.12
+
+
+-- This query selects specific columns 'name' and 'commission' from the 'salesman' table.
+SELECT name, commission
+-- Specifies the table from which to retrieve the data (in this case, 'salesman').
+FROM salesman;
