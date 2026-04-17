@@ -14,3 +14,9 @@ ord_no      purch_amt   ord_date    customer_id  salesman_id
 70008       5760        2012-09-10  3002         5001
 70010       1983.43     2012-10-10  3004         5006
 ....
+
+
+-- This query selects unique/distinct values from the 'salesman_id' column in the 'orders' table.
+SELECT DISTINCT salesman_id
+-- Specifies the table from which to retrieve the data (in this case, 'orders').
+FROM orders;
