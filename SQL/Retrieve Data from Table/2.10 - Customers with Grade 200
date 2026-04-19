@@ -12,3 +12,11 @@ Sample table: customer
         3009 | Geoff Cameron  | Berlin     |   100 |        5003
         3003 | Jozy Altidor   | Moscow     |   200 |        5007
         3001 | Brad Guzan     | London     |       |        5005
+
+
+-- This query selects all columns from the 'customer' table.
+SELECT *
+-- Specifies the table from which to retrieve the data (in this case, 'customer').
+FROM customer
+-- Filters the rows to only include those where the 'grade' column has the value 200.
+WHERE grade = 200;
