@@ -12,3 +12,11 @@ ord_no      purch_amt   ord_date    customer_id  salesman_id
 70005       2400.6      2012-07-27  3007         5001
 70008       5760        2012-09-10  3002         5001
 70010       1983.43     2012-10-10  3004         5006
+
+
+-- This query selects specific columns 'ord_no', 'ord_date', and 'purch_amt' from the 'orders' table.
+SELECT ord_no, ord_date, purch_amt
+-- Specifies the table from which to retrieve the data (in this case, 'orders').
+FROM orders
+-- Filters the rows to only include those where the 'salesman_id' column has the value 5001.
+WHERE salesman_id = 5001;
