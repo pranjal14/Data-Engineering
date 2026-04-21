@@ -12,3 +12,11 @@ YEAR SUBJECT                   WINNER                                        COU
 1970 Physiology                Julius Axelrod                                USA                    Scientist
 .....
 1994 Literature                Kenzaburo Oe                                  Japan                  Linguist
+
+
+-- This query selects specific columns 'year', 'subject', and 'winner' from the 'nobel_win' table.
+SELECT year, subject, winner
+-- Specifies the table from which to retrieve the data (in this case, 'nobel_win').
+FROM nobel_win
+-- Filters the rows to only include those where the 'year' column has the value 1970.
+WHERE year = 1970;
