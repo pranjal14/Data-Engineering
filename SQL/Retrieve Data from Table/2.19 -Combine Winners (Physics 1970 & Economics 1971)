@@ -14,3 +14,16 @@ YEAR SUBJECT                   WINNER                                        COU
 1970 Physiology                Julius Axelrod                                USA                    Scientist
 .....
 1994 Literature                Kenzaburo Oe                                  Japan                  Linguist
+
+
+-- This query selects all columns from the 'nobel_win' table.
+SELECT *
+-- Specifies the table from which to retrieve the data (in this case, 'nobel_win').
+FROM nobel_win
+-- Combines the results of two SELECT statements using the UNION operator.
+-- The first SELECT statement retrieves rows where the 'subject' is 'Physics' and the 'year' is 1970.
+WHERE (subject = 'Physics' AND year = 1970)
+-- The UNION operator combines the results of the first SELECT statement with the results of the second SELECT statement.
+UNION
+-- The second SELECT statement retrieves rows where the 'subject' is 'Economics' and the 'year' is 1971.
+(SELECT * FROM nobel_win WHERE (subject = 'Economics' AND year = 1971));
