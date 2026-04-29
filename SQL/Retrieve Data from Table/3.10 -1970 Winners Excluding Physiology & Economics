@@ -13,3 +13,13 @@ YEAR SUBJECT                   WINNER                                        COU
 1970 Economics                 Paul Samuelson                                USA                    Economist
 1970 Physiology                Julius Axelrod                                USA                    Scientist
 1971 Physics                   Dennis Gabor                                  Hungary   
+
+
+-- This query selects all columns from the 'nobel_win' table.
+SELECT *
+-- Specifies the table from which to retrieve the data (in this case, 'nobel_win').
+FROM nobel_win
+-- Filters the rows to only include those where the 'year' column has the value 1970
+-- and the 'subject' column is not 'Physiology' or 'Economics'.
+WHERE year = 1970
+  AND subject NOT IN ('Physiology', 'Economics');
