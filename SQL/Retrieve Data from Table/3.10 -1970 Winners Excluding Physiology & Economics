@@ -1,2 +1,15 @@
 
 From the following table, write a SQL query to find the Nobel Prize winners in 1970 excluding the subjects of Physiology and Economics. Return year, subject, winner, country, and category. 
+Sample table: nobel_win
+
+YEAR SUBJECT                   WINNER                                        COUNTRY                CATEGORY
+---- ------------------------- --------------------------------------------- ------------------------- ------------
+1970 Physics                   Hannes Alfven                                 Sweden                 Scientist
+1970 Physics                   Louis Neel                                    France                 Scientist
+1970 Chemistry                 Luis Federico Leloir                          France                 Scientist
+1970 Physiology                Ulf von Euler                                 Sweden                 Scientist
+1970 Physiology                Bernard Katz                                  Germany                Scientist
+1970 Literature                Aleksandr Solzhenitsyn                        Russia                 Linguist
+1970 Economics                 Paul Samuelson                                USA                    Economist
+1970 Physiology                Julius Axelrod                                USA                    Scientist
+1971 Physics                   Dennis Gabor                                  Hungary   
