@@ -14,3 +14,11 @@ Sample table: item_mast
     108 Printer                         2600.00         13
     109 Refill cartridge                 350.00         13
     110 Mouse                            250.00         12
+
+
+-- This query selects all columns from the 'item_mast' table.
+SELECT *
+-- Specifies the table from which to retrieve the data (in this case, 'item_mast').
+FROM item_mast
+-- Filters the rows to only include those where the 'pro_price' column is between 200 and 600 (inclusive).
+WHERE pro_price BETWEEN 200 AND 600;
