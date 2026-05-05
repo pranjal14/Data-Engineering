@@ -14,3 +14,11 @@ Sample table: item_mast
     108 Printer                         2600.00         13
     109 Refill cartridge                 350.00         13
     110 Mouse                            250.00         12
+
+
+-- This query calculates the average value of the 'pro_price' column from the 'item_mast' table.
+SELECT AVG(pro_price)
+-- Specifies the table from which to retrieve the data (in this case, 'item_mast').
+FROM item_mast
+-- Filters the rows to only include those where the 'pro_com' column has the value 16.
+WHERE pro_com = 16;
