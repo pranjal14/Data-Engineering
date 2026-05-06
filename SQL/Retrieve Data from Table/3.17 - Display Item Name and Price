@@ -14,3 +14,10 @@ Sample table : item_mast
     108 Printer                         2600.00         13
     109 Refill cartridge                 350.00         13
     110 Mouse                            250.00         12
+
+
+-- This query selects specific columns and renames them for better readability.
+-- It renames the 'pro_name' column to "Item Name" and the 'pro_price' column to "Price in Rs."
+SELECT pro_name as "Item Name", pro_price AS "Price in Rs."
+-- Specifies the table from which to retrieve the data (in this case, 'item_mast').
+FROM item_mast;
