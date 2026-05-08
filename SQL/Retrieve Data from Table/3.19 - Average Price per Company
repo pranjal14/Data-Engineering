@@ -14,3 +14,11 @@ Sample table: item_mast
     108 Printer                         2600.00         13
     109 Refill cartridge                 350.00         13
     110 Mouse                            250.00         12
+
+
+-- This query calculates the average value of the 'pro_price' column for each distinct value of 'pro_com'.
+SELECT AVG(pro_price), pro_com
+-- Specifies the table from which to retrieve the data (in this case, 'item_mast').
+FROM item_mast
+-- Groups the result set by the 'pro_com' column.
+GROUP BY pro_com;
