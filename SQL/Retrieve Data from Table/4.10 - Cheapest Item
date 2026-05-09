@@ -15,3 +15,11 @@ Sample table: item_mast
     108 Printer                         2600.00         13
     109 Refill cartridge                 350.00         13
     110 Mouse                            250.00         12
+
+
+-- This query selects specific columns 'pro_name' and 'pro_price' from the 'item_mast' table.
+SELECT pro_name, pro_price
+-- Specifies the table from which to retrieve the data (in this case, 'item_mast').
+FROM item_mast
+-- Filters the rows to only include those where the 'pro_price' column is equal to the minimum 'pro_price'.
+WHERE pro_price = (SELECT MIN(pro_price) FROM item_mast);
