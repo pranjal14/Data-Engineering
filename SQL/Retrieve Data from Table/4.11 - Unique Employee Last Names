@@ -18,3 +18,9 @@ Sample table: emp_details
    733843 Mario           Saule                   63
    631548 Alan            Snappy                  27
    839139 Maria           Foster                  57
+
+
+-- This query selects distinct values from the 'emp_lname' column of the 'emp_details' table.
+SELECT DISTINCT emp_lname
+-- Specifies the table from which to retrieve the data (in this case, 'emp_details').
+FROM emp_details;
