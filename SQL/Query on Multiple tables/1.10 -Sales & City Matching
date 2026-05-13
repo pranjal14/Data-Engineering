@@ -23,3 +23,12 @@ Sample table: customer
         3009 | Geoff Cameron  | Berlin     |   100 |        5003
         3003 | Jozy Altidor   | Moscow     |   200 |        5007
         3001 | Brad Guzan     | London     |       |        5005
+
+
+-- This query selects specific columns ('customer.cust_name', 'salesman.name', 'salesman.city') from the 'salesman' and 'customer' tables.
+-- It retrieves data where the 'city' column in the 'salesman' table matches the 'city' column in the 'customer' table.
+SELECT customer.cust_name, salesman.name, salesman.city
+-- Specifies the tables from which to retrieve the data (in this case, 'salesman' and 'customer').
+FROM salesman, customer
+-- Specifies the condition for joining the 'salesman' and 'customer' tables based on the equality of the 'city' columns.
+WHERE salesman.city = customer.city;
