@@ -1,1 +1,2 @@
 
+From the following tables, write a SQL query to locate all the customers and the salesperson who works for them. Return customer name, and salesperson name.
