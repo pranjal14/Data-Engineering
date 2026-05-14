@@ -22,3 +22,12 @@ Sample table: salesman
         5006 | Mc Lyon    | Paris    |       0.14
         5007 | Paul Adam  | Rome     |       0.13
         5003 | Lauson Hen | San Jose |       0.12
+
+
+-- This query selects specific columns ('customer.cust_name' and 'salesman.name') from the 'customer' and 'salesman' tables.
+-- It retrieves data where the 'salesman_id' column in the 'salesman' table matches the 'salesman_id' column in the 'customer' table.
+SELECT customer.cust_name, salesman.name
+-- Specifies the tables from which to retrieve the data (in this case, 'customer' and 'salesman').
+FROM customer, salesman
+-- Specifies the condition for joining the 'customer' and 'salesman' tables based on the equality of the 'salesman_id' columns.
+WHERE salesman.salesman_id = customer.salesman_id;
