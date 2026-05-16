@@ -38,3 +38,16 @@ ord_no      purch_amt   ord_date    customer_id  salesman_id
 70012       250.45      2012-06-27  3008         5002
 70011       75.29       2012-08-17  3003         5007
 70013       3045.6      2012-04-25  3002         5001
+
+
+-- This query selects specific columns ('ord_no', 'cust_name', 'orders.customer_id', 'orders.salesman_id') from the 'salesman', 'customer', and 'orders' tables.
+-- It retrieves data where the 'city' column in the 'customer' table is not equal to the 'city' column in the 'salesman' table.
+-- Additionally, it ensures that the 'customer_id' column in the 'orders' table matches the 'customer_id' column in the 'customer' table,
+-- and the 'salesman_id' column in the 'orders' table matches the 'salesman_id' column in the 'salesman' table.
+SELECT ord_no, cust_name, orders.customer_id, orders.salesman_id
+-- Specifies the tables from which to retrieve the data (in this case, 'salesman', 'customer', and 'orders').
+FROM salesman, customer, orders
+-- Specifies the conditions for joining the tables and filtering the data.
+WHERE customer.city <> salesman.city
+  AND orders.customer_id = customer.customer_id
+  AND orders.salesman_id = salesman.salesman_id;
