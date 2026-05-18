@@ -29,3 +29,18 @@ Sample table: customer
         3009 | Geoff Cameron  | Berlin     |   100 |        5003
         3003 | Jozy Altidor   | Moscow     |   200 |        5007
         3001 | Brad Guzan     | London     |       |        5005
+
+
+-- This query selects specific columns ('customer.cust_name' with alias "Customer", 'customer.grade' with alias "Grade", 'orders.ord_no' with alias "Order No.") 
+-- from the 'orders', 'salesman', and 'customer' tables.
+-- It retrieves data where the 'customer_id' column in the 'orders' table matches the 'customer_id' column in the 'customer' table,
+-- the 'salesman_id' column in the 'orders' table matches the 'salesman_id' column in the 'salesman' table,
+-- and ensures that 'salesman.city' and 'customer.grade' are not NULL.
+SELECT customer.cust_name AS "Customer", customer.grade AS "Grade", orders.ord_no AS "Order No."
+-- Specifies the tables from which to retrieve the data (in this case, 'orders', 'salesman', and 'customer').
+FROM orders, salesman, customer
+-- Specifies the conditions for joining the tables and filtering the data.
+WHERE orders.customer_id = customer.customer_id
+  AND orders.salesman_id = salesman.salesman_id
+  AND salesman.city IS NOT NULL
+  AND customer.grade IS NOT NULL;
