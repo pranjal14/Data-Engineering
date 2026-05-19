@@ -23,3 +23,15 @@ Sample table: customer
         3009 | Geoff Cameron  | Berlin     |   100 |        5003
         3003 | Jozy Altidor   | Moscow     |   200 |        5007
         3001 | Brad Guzan     | London     |       |        5005
+
+
+-- This query selects specific columns ('customer.cust_name' with alias "Customer", 'customer.city' with alias "City",
+-- 'salesman.name' with alias "Salesman", 'salesman.commission') from the 'customer' and 'salesman' tables.
+-- It retrieves data where the 'salesman_id' column in the 'customer' table matches the 'salesman_id' column in the 'salesman' table,
+-- and the 'commission' column in the 'salesman' table is between 0.12 and 0.14.
+SELECT customer.cust_name AS "Customer", customer.city AS "City", salesman.name AS "Salesman", salesman.commission
+-- Specifies the tables from which to retrieve the data (in this case, 'customer' and 'salesman').
+FROM customer, salesman
+-- Specifies the conditions for joining the tables and filtering the data.
+WHERE customer.salesman_id = salesman.salesman_id
+  AND salesman.commission BETWEEN 0.12 AND 0.14;
