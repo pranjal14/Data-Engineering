@@ -39,3 +39,17 @@ ord_no      purch_amt   ord_date    customer_id  salesman_id
 70012       250.45      2012-06-27  3008         5002
 70011       75.29       2012-08-17  3003         5007
 70013       3045.6      2012-04-25  3002         5001
+
+
+-- This query selects specific columns ('ord_no', 'cust_name', 'commission' with alias "Commission%", 
+-- and 'purch_amt * commission' with alias "Commission") from the 'salesman', 'orders', and 'customer' tables.
+-- It retrieves data where the 'customer_id' column in the 'orders' table matches the 'customer_id' column in the 'customer' table,
+-- the 'salesman_id' column in the 'orders' table matches the 'salesman_id' column in the 'salesman' table,
+-- and the 'grade' column in the 'customer' table is greater than or equal to 200.
+SELECT ord_no, cust_name, commission AS "Commission%", purch_amt * commission AS "Commission"
+-- Specifies the tables from which to retrieve the data (in this case, 'salesman', 'orders', and 'customer').
+FROM salesman, orders, customer
+-- Specifies the conditions for joining the tables and filtering the data.
+WHERE orders.customer_id = customer.customer_id
+  AND orders.salesman_id = salesman.salesman_id
+  AND customer.grade >= 200;
