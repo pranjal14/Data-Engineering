@@ -29,3 +29,14 @@ ord_no      purch_amt   ord_date    customer_id  salesman_id
 70012       250.45      2012-06-27  3008         5002
 70011       75.29       2012-08-17  3003         5007
 70013       3045.6      2012-04-25  3002         5001
+
+
+-- This query selects all columns ('*') from the 'customer' table (aliased as 'a') and the 'orders' table (aliased as 'b').
+-- It retrieves data where the 'customer_id' column in the 'a' table (customer) matches the 'customer_id' column in the 'b' table (orders),
+-- and the 'ord_date' column in the 'b' table is equal to '2012-10-05'.
+SELECT *
+-- Specifies the tables from which to retrieve the data (in this case, 'customer' aliased as 'a' and 'orders' aliased as 'b').
+FROM customer a, orders b
+-- Specifies the conditions for joining the tables and filtering the data.
+WHERE a.customer_id = b.customer_id
+  AND b.ord_date = '2012-10-05';
