@@ -17,3 +17,12 @@ ord_no      purch_amt   ord_date    customer_id  salesman_id
 70012       250.45      2012-06-27  3008         5002
 70011       75.29       2012-08-17  3003         5007
 70013       3045.6      2012-04-25  3002         5001
+
+
+-- This query selects all columns from the 'orders' table.
+SELECT *
+-- Specifies the table from which to retrieve the data (in this case, 'orders').
+FROM orders
+-- Filters the rows to only include those where either the 'purch_amt' is less than 200
+-- or the conditions inside the parentheses following 'NOT' are not true.
+WHERE (purch_amt < 200 OR NOT (ord_date >= '2012-02-10' AND customer_id < 3009));
