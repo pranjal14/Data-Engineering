@@ -17,3 +17,16 @@ ord_no      purch_amt   ord_date    customer_id  salesman_id
 70012       250.45      2012-06-27  3008         5002
 70011       75.29       2012-08-17  3003         5007
 70013       3045.6      2012-04-25  3002         5001
+
+
+-- This query selects specific columns 'ord_no', 'purch_amt', and calculates two additional columns.
+-- It calculates the percentage of the achieved and unachieved amounts based on a target of 6000.
+SELECT ord_no, purch_amt,
+       -- Calculates the percentage of the achieved amount.
+       (100 * purch_amt) / 6000 AS "Achieved %",
+       -- Calculates the percentage of the unachieved amount.
+       (100 * (6000 - purch_amt) / 6000) AS "Unachieved %"
+-- Specifies the table from which to retrieve the data (in this case, 'orders').
+FROM orders
+-- Filters the rows to only include those where the percentage of the achieved amount is greater than 50%.
+WHERE (100 * purch_amt) / 6000 > 50;
