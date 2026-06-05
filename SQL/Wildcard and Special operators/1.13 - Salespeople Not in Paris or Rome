@@ -11,3 +11,10 @@ Sample table: salesman
         5006 | Mc Lyon    | Paris    |       0.14
         5007 | Paul Adam  | Rome     |       0.13
         5003 | Lauson Hen | San Jose |       0.12
+
+-- Selecting all columns from the 'salesman' table
+SELECT *
+-- Specifying the table to retrieve data from ('salesman')
+FROM salesman
+-- Filtering the results based on the condition that 'city' is not in the specified list ('Paris' and 'Rome')
+WHERE city NOT IN('Paris','Rome');
