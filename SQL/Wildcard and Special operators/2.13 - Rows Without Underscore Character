@@ -1,1 +1,4 @@
 
+From the following table, write a SQL query to identify those rows where col1 does not contain the escape character underscore ( _ ). Return col1.Programming
+
+Sample table: testtable
