@@ -1,0 +1,1 @@
+This resource offers a total of 125 SQL Aggregate Functions problems for practice. It includes 25 main exercises, each accompanied by solutions, detailed explanations, and four related problems.
