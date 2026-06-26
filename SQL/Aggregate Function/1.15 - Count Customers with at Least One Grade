@@ -13,3 +13,9 @@ Sample table: customer
         3009 | Geoff Cameron  | Berlin     |   100 |        5003
         3003 | Jozy Altidor   | Moscow     |   200 |        5007
         3001 | Brad Guzan     | London     |       |        5005
+
+
+-- This query counts the total number of rows where the 'grade' column is not NULL in the 'customer' table.
+SELECT COUNT(ALL grade)
+-- Specifies the table from which to retrieve the data (in this case, 'customer').
+FROM customer
