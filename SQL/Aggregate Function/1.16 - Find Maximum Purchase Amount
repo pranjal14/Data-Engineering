@@ -17,3 +17,9 @@ ord_no      purch_amt   ord_date    customer_id  salesman_id
 70012       250.45      2012-06-27  3008         5002
 70011       75.29       2012-08-17  3003         5007
 70013       3045.6      2012-04-25  3002         5001
+
+
+-- This query retrieves the maximum value in the 'purch_amt' column from the 'orders' table.
+SELECT MAX(purch_amt)
+-- Specifies the table from which to retrieve the data (in this case, 'orders').
+FROM orders;
