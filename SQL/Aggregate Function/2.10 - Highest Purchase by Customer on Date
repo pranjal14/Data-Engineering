@@ -17,3 +17,11 @@ ord_no      purch_amt   ord_date    customer_id  salesman_id
 70012       250.45      2012-06-27  3008         5002
 70011       75.29       2012-08-17  3003         5007
 70013       3045.6      2012-04-25  3002         5001
+
+
+-- This query retrieves the maximum 'purch_amt' value for each combination of 'customer_id' and 'ord_date' from the 'orders' table.
+SELECT customer_id, ord_date, MAX(purch_amt)
+-- Specifies the table from which to retrieve the data (in this case, 'orders').
+FROM orders
+-- Groups the result set by the 'customer_id' and 'ord_date' columns.
+GROUP BY customer_id, ord_date;
