@@ -17,3 +17,17 @@ ord_no      purch_amt   ord_date    customer_id  salesman_id
 70012       250.45      2012-06-27  3008         5002
 70011       75.29       2012-08-17  3003         5007
 70013       3045.6      2012-04-25  3002         5001
+
+
+-- This query retrieves the maximum 'purch_amt' value for each 'customer_id' from the 'orders' table.
+-- It only includes rows where the 'customer_id' is between 3002 and 3007.
+-- The result set is then further filtered to only include rows where the maximum 'purch_amt' is greater than 1000.
+SELECT customer_id, MAX(purch_amt)
+-- Specifies the table from which to retrieve the data (in this case, 'orders').
+FROM orders
+-- Filters the rows to only include those where the 'customer_id' is between 3002 and 3007.
+WHERE customer_id BETWEEN 3002 AND 3007
+-- Groups the result set by the 'customer_id' column.
+GROUP BY customer_id
+-- Filters the grouped results to only include those where the maximum 'purch_amt' is greater than 1000.
+HAVING MAX(purch_amt) > 1000;
