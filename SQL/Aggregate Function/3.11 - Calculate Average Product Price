@@ -15,3 +15,9 @@ Sample table: item_mast
     108 Printer                         2600.00         13
     109 Refill cartridge                 350.00         13
     110 Mouse                            250.00         12
+
+
+-- This query calculates the average 'pro_price' from the 'item_mast' table and assigns it the alias "Average Price".
+SELECT AVG(pro_price) AS "Average Price"
+-- Specifies the table from which to retrieve the data (in this case, 'item_mast').
+FROM item_mast;
