@@ -15,3 +15,11 @@ Sample table: item_mast
     108 Printer                         2600.00         13
     109 Refill cartridge                 350.00         13
     110 Mouse                            250.00         12
+
+
+-- This query counts the number of products in the 'item_mast' table where the 'pro_price' is greater than or equal to 350.
+SELECT COUNT(*) AS "Number of Products"
+-- Specifies the table from which to retrieve the data (in this case, 'item_mast').
+FROM item_mast
+-- Filters the rows to only include those where the 'pro_price' is greater than or equal to 350.
+WHERE pro_price >= 350;
