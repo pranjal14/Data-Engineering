@@ -15,3 +15,12 @@ Sample table: item_mast
     108 Printer                         2600.00         13
     109 Refill cartridge                 350.00         13
     110 Mouse                            250.00         12
+
+
+-- This query calculates the average 'pro_price' for each 'pro_com' (Company ID) in the 'item_mast' table.
+SELECT AVG(pro_price) AS "Average Price",
+       pro_com AS "Company ID"
+-- Specifies the table from which to retrieve the data (in this case, 'item_mast').
+FROM item_mast
+-- Groups the result set by the 'pro_com' column.
+GROUP BY pro_com;
