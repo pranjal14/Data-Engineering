@@ -10,3 +10,8 @@ DPT_CODE DPT_NAME        DPT_ALLOTMENT
       47 HR                     240000
       27 RD                      55000
       89 QC                      75000
+
+-- This query calculates the sum of 'dpt_allotment' from the 'emp_department' table.
+SELECT SUM(dpt_allotment)
+-- Specifies the table from which to retrieve the data (in this case, 'emp_department').
+FROM emp_department;
