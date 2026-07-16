@@ -18,3 +18,11 @@ Sample table: emp_details
    733843 Mario           Saule                   63
    631548 Alan            Snappy                  27
    839139 Maria           Foster                  57
+
+
+-- This query counts the number of employees in each department ('emp_dept') from the 'emp_details' table.
+SELECT emp_dept, COUNT(*)
+-- Specifies the table from which to retrieve the data (in this case, 'emp_details').
+FROM emp_details
+-- Groups the result set by the 'emp_dept' column.
+GROUP BY emp_dept;
