@@ -11,3 +11,10 @@ Sample table: salesman
         5006 | Mc Lyon    | Paris    |       0.14
         5007 | Paul Adam  | Rome     |       0.13
         5003 | Lauson Hen | San Jose |       0.12
+
+
+-- This query selects specific columns from the 'salesman' table and performs a calculation on the 'commission' column.
+-- It also appends '%' to the result of the commission calculation.
+SELECT salesman_id, name, city, '%', commission * 100
+-- Specifies the table from which to retrieve the data (in this case, 'salesman').
+FROM salesman;
