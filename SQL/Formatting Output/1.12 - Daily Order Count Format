@@ -17,3 +17,12 @@ ord_no      purch_amt   ord_date    customer_id  salesman_id
 70012       250.45      2012-06-27  3008         5002
 70011       75.29       2012-08-17  3003         5007
 70013       3045.6      2012-04-25  3002         5001
+
+
+-- This query counts the number of orders for each 'ord_date' and provides a descriptive output.
+-- It selects constant strings along with calculated counts for each 'ord_date'.
+SELECT ' For', ord_date, ',there are', COUNT(ord_no), 'orders.'
+-- Specifies the table from which to retrieve the data (in this case, 'orders').
+FROM orders
+-- Groups the result set by the 'ord_date' column.
+GROUP BY ord_date;
