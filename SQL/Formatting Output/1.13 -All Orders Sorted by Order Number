@@ -17,3 +17,11 @@ ord_no      purch_amt   ord_date    customer_id  salesman_id
 70012       250.45      2012-06-27  3008         5002
 70011       75.29       2012-08-17  3003         5007
 70013       3045.6      2012-04-25  3002         5001
+
+
+-- This query selects all columns from the 'orders' table and orders the result set by the 'ord_no' column.
+SELECT *
+-- Specifies the table from which to retrieve the data (in this case, 'orders').
+FROM orders
+-- Orders the result set by the 'ord_no' column in ascending order (default order).
+ORDER BY ord_no;
